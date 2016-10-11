@@ -8,31 +8,14 @@
 </head>
 <body ng-app="todoListApp">
 
-
-  <div ng-controller="mainCtrl" class="list">
-    <div class="add">
-      <a href="" ng-click="addTodo()">+ Add a New Task</a>
-    </div>
-    <h1>My TODOs</h1>
-    <div class="item" ng-class="{'editing-item': editing, 'edited': todo.edited, 'completed': todo.completed}" ng-repeat="todo in todos | orderBy: 'completed'" ng-init="todo.completed = false">
-      <input ng-model="todo.completed" type="checkbox" />
-      <span ng-click="todo.completed = !todo.completed"></span>
-      <label ng-hide="editing">{{todo.name}}</label>
-      <input ng-change="todo.edited = true" ng-blur="editing = false" ng-show="editing" ng-model="todo.name" class="editing-label" type="text">
-
-      <div class="actions">
-        <a href="" ng-click="editing = !editing">edit</a>
-        <a href="" ng-click="saveTodo(todo)">save</a>
-        <a href="" ng-click="deleteTodo(todo, $index)" class="delete">delete</a>
-      </div>
-
-    </div>
-  </div>
+  <h1>My TODOs</h1>
+  <todos></todos>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <script src="scripts/app.js" charset="utf-8"></script>
   <script src="scripts/controllers/main.js" charset="utf-8"></script>
   <script src="scripts/services/data.js" charset="utf-8"></script>
+  <script src="scripts/directives/todos.js" charset="utf-8"></script>
 
 </body>
 </html>
