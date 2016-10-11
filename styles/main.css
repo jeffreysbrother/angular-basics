@@ -80,7 +80,7 @@ a:hover {
 }
 
 
-/*input[type="checkbox"] {
+input[type="checkbox"] {
     display:none;
 }
 input[type="checkbox"] + span {
@@ -89,9 +89,9 @@ input[type="checkbox"] + span {
     height:19px;
     margin:-1px 4px 0 0;
     vertical-align:middle;
-    background:url(checkbox-empty.svg) left top no-repeat;
+    background:url('checkbox-empty.svg') left top no-repeat;
     cursor:pointer;
 }
 input[type="checkbox"]:checked + span {
-    background:url(checkbox-filled.svg) left top no-repeat;
-}*/
+    background:url('checkbox-filled.svg') left top no-repeat;
+}
