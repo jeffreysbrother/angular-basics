@@ -28,11 +28,11 @@ angular.module("todoListApp", [])
   };
 
   this.deleteTodo = function(todo) {
-    console.log("The \'" + todo.name + "\' todo has been deleted!");
+    console.log("The \'" + todo.name.toUpperCase() + "\' todo has been deleted!");
     // other logic
   };
   this.saveTodos = function(todo) {
-    console.log("The \'" + todo.name + "\' todo has been saved!");
+    console.log("The \'" + todo.name.toUpperCase() + "\' todo has been saved!");
     // other logic
   }
 });
